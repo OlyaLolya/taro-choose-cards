@@ -8,12 +8,34 @@ type SubmitButtonProps = {
 }
 
 export const SubmitButton = ({tarotList}: SubmitButtonProps) => {
+
+    const sendMessageToTelegram = async (message: string) => {
+        const params = new URL(window.location.href ?? '')
+            .searchParams;
+        const chatId = params.get("chatid");
+        const token = '8104100408:AAGW7Hyr_N3_XQZK5F39tgRSnClaDQFBwiE';
+        const url = `https://api.telegram.org/bot${token}/sendMessage`;
+
+        const response = await fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                chat_id: chatId,
+                text: message,
+            }),
+        });
+
+        return await response.json();
+    };
+
     return (
         <button
             disabled={tarotList.length < 3}
             className={cn(styles.button,  { [styles.buttonDisabled]: tarotList.length < 3 })}
             onClick={() => {
-                const cardsNames = tarotList.reduce((accumulator, card, currentIndex, tarotList) => {
+                const cardsNames = tarotList.reduce((accumulator, card, currentIndex) => {
                     if(currentIndex === 0) {
                         return card.name
                     }
@@ -21,9 +43,7 @@ export const SubmitButton = ({tarotList}: SubmitButtonProps) => {
                         return accumulator + ', ' + card.name
                     }
                 }, '')
-
-                console.log(cardsNames)
-
+                sendMessageToTelegram(`Вы выбрали карты: ${cardsNames}`)
             }}
         >
             Готово
