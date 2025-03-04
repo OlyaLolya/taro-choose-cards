@@ -1,25 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useMemo, useState} from 'react';
+import styles from './App.module.css';
+import { Header } from "./Components/Header/Header";
+import {CardsList} from "./Components/CardsList/CardsList";
+import {SubmitButton} from './Components/SubmitButton/SubmitButton';
+import {getTarotCards} from "./assets/utils/getTarotCards";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    const [tarotList, setTarotList] = useState([]);
+    const cards = useMemo(() => getTarotCards(), [])
+
+    return (
+        <div className={styles.App}>
+            <Header />
+            <CardsList cards={cards} tarotList={tarotList} setTarotList={setTarotList} />
+            <SubmitButton tarotList={tarotList} />
+        </div>
   );
 }
 

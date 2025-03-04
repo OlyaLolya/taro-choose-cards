@@ -1,0 +1,24 @@
+.container {
+    width: 100%;
+    background-color: #22223e;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.description {
+    margin-bottom: 20px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+@media screen and (max-width: 450px){
+    .wrapper{
+        gap: 10px;
+    }
+}

@@ -1,0 +1,13 @@
+.button {
+    background-color: #665fc6;
+    padding: 8px 24px;
+    max-width: min-content;
+    border-radius: 20px;
+
+    border: none;
+    outline: none;
+}
+
+.buttonDisabled {
+    background-color: #73708a;
+}
