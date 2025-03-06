@@ -1,7 +1,7 @@
 {
   "name": "taro-choose-cards",
   "version": "0.1.0",
-  "homepage": "https://gitname.github.io/taro-choose-cards",
+  "homepage": "https://olyalolya.github.io/taro-choose-cards/",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
