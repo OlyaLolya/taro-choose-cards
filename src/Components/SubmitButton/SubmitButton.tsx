@@ -2,6 +2,7 @@ import React from "react";
 import styles from './SubmitButton.module.css'
 import {TTarotCard} from "../../assets/utils/TarotDeck";
 import cn from 'classnames';
+import process from "process";
 
 type SubmitButtonProps = {
     tarotList: TTarotCard[],
@@ -43,7 +44,10 @@ export const SubmitButton = ({tarotList}: SubmitButtonProps) => {
                         return accumulator + ', ' + card.name
                     }
                 }, '')
-                sendMessageToTelegram(`Вы выбрали карты: ${cardsNames}`)
+
+                // window.Telegram.WebApp.sendData('Вы выбрали карты:');
+                // sendMessageToTelegram(`Вы выбрали карты: ${cardsNames}`)
+                sendMessageToTelegram(`Вы выбрали карты:`)
             }}
         >
             Готово
