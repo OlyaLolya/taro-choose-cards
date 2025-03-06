@@ -45,9 +45,9 @@ export const SubmitButton = ({tarotList}: SubmitButtonProps) => {
                     }
                 }, '')
 
-                // window.Telegram.WebApp.sendData('Вы выбрали карты:');
+                window.Telegram.WebApp.sendData('Вы выбрали карты:');
                 // sendMessageToTelegram(`Вы выбрали карты: ${cardsNames}`)
-                sendMessageToTelegram(`Вы выбрали карты:`)
+                // sendMessageToTelegram(`Вы выбрали карты:`)
             }}
         >
             Готово
