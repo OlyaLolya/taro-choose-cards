@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/taro-choose-cards/static/css/main.afc5b1b4.css",
-    "main.js": "/taro-choose-cards/static/js/main.67070d64.js",
+    "main.js": "/taro-choose-cards/static/js/main.2e1f43f2.js",
     "static/media/shirt.jpg": "/taro-choose-cards/static/media/shirt.e2a1632ab30a926654ba.jpg",
     "index.html": "/taro-choose-cards/index.html",
     "main.afc5b1b4.css.map": "/taro-choose-cards/static/css/main.afc5b1b4.css.map",
-    "main.67070d64.js.map": "/taro-choose-cards/static/js/main.67070d64.js.map"
+    "main.2e1f43f2.js.map": "/taro-choose-cards/static/js/main.2e1f43f2.js.map"
   },
   "entrypoints": [
     "static/css/main.afc5b1b4.css",
-    "static/js/main.67070d64.js"
+    "static/js/main.2e1f43f2.js"
   ]
 }
